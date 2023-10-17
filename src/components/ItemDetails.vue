@@ -1,5 +1,6 @@
 <template>
     <div>
+        <button class="return_back" @click="$router.back()">&lt; Back</button>
         <h2>Vehicle details {{ info.name }}</h2>
 
         <div>

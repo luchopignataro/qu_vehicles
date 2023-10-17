@@ -16,6 +16,7 @@ export default {
     return {
       resource_name: 'vehicles',
       resource: [],
+      resource_clone: [],
       title: 'Star Wars Vehicles list',
       loading: true
     }
@@ -30,6 +31,7 @@ export default {
           const info = await goToPage(this.resource_name, number)
           .then(res => {
             this.resource = res.data
+            this.resource_clone = [...this.resource.results]
           })
         } catch (error) {
           console.error(error)
@@ -46,6 +48,7 @@ export default {
           const info = await getResource(this.resource_name)
           .then(res => {
             this.resource = res.data
+            this.resource_clone = [...this.resource.results]
           })
         } catch (error) {
           console.error(error)
@@ -64,17 +67,16 @@ export default {
       } else if(this.resource.next === null){
         return Number(this.resource.previous.split('').pop()) + 1
       }
+    },
+    headerItems(){
+      let headers = Object.keys(this.resource.results[0]).slice(0,3)
+      headers.push('details')
+      return headers
     }
   },
   components: {
     Header,
     Loading
-  },
-  watch:{
-    resource: function(value, old_value){
-      console.log(old_value)
-      console.log(value)
-    }
   }
 }
 </script>
