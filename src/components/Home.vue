@@ -4,7 +4,7 @@
     <div class="row">
       <p>Showing: {{ $root.resource_clone.length }} of {{ $root.resource.count }}</p>
       <small>You can sort columns by clicking on the small arrows</small>
-      <table class="col s12 highlight ">
+      <table class="col s12 highlight responsive-table">
         <thead>
           <tr>
             <td v-for="name in this.$root.headerItems" :key="name">
