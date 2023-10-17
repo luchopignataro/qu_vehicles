@@ -89,7 +89,7 @@ body{
 }
 
 #app {
-  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-family: 'Pixelify Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
