@@ -31,7 +31,7 @@ export default {
             info: [],
             id: this.$route.params.id,
             star_wars: true,
-            fields: ['name','model','vehicle_class','manufacturer','length','cost_in_credits','crew','passengers','max_atmosphering_speed','cargo_capacity','consumables','films','pilots']
+            fields: ['name','model','vehicle_class','manufacturer','length','cost_in_credits','crew','passengers','max_atmosphering_speed','cargo_capacity','consumables']
         }
     },
     mounted() {
@@ -44,6 +44,11 @@ export default {
                 const data = await getItemDetails(this.resource_name,this.id)
                 .then(data => {
                     this.info = data.data
+                    for (const item in this.info) {
+                        if(!this.fields.includes(item)){
+                            delete this.info[item]
+                        }
+                    }
                 })
             } catch (error) {
                 console.error(error)
