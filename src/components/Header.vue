@@ -1,14 +1,14 @@
 <template>
     <header>
-        <img class="logo" alt="Vehicles list logo" src="../assets/logo.png">
-        <p>Vehicles list</p>
+        <img class="logo" alt="SW resources list logo" src="../assets/logo.png">
+        <p>{{ title }}</p>
+
+        <router-link :to="{name: 'home'}">Home</router-link>
     </header>
 </template>
 
-<script>
-    export default {
-        name: 'TopBar'
-    }
+<script setup>
+const title = 'Star Wars API'
 
 </script>
 
@@ -18,7 +18,7 @@
         max-height: 45px;
         border-bottom: 1px solid grey;
         display: flex;
-        justify-content: start;
+        justify-content: flex-start;
         align-items: center;
         box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 5px 0 rgba(0,0,0,.23);
 
