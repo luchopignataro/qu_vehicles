@@ -1,17 +1,18 @@
 <template>
-  <div>
-    <h1>{{ $root.title }}</h1>
-    
-    <div>
-      <p>Items quantity: {{ $root.resource.count }}</p>
-      <table>
+  <div class="container">
+    <h1>{{ $root.title }}</h1>    
+    <div class="row">
+      <p>Showing: {{ $root.resource_clone.length }} of {{ $root.resource.count }}</p>
+      <small>You can sort columns by clicking on the small arrows</small>
+      <table class="col s12 highlight ">
         <thead>
           <tr>
             <td v-for="name in this.$root.headerItems" :key="name">
-              {{ name }}
-              <button @click="sortItems(name, 'asc')">Asc</button>
-              <button @click="sortItems(name, 'desc')">Desc</button>
+              {{ name.toUpperCase() }}
+              <a class="sort_arrow" @click="sortItems(name, 'asc')"><i class="material-icons right">arrow_drop_down</i></a>
+              <a class="sort_arrow" @click="sortItems(name, 'desc')"><i class="material-icons right">arrow_drop_up</i></a>
             </td>
+            <td>DETAILS</td>
           </tr>
         </thead>
         <tbody>
@@ -19,7 +20,7 @@
             <td>{{ v.name }} </td>
             <td>{{ v.model }} </td>
             <td>{{ v.manufacturer }} </td>
-            <td><router-link :to="{ name:'details', params:{id: $root.getItemId(v.url)} }" >View details</router-link></td>
+            <td><router-link :to="{ name:'details', params:{id: $root.getItemId(v.url)} }" class="waves-effect waves-light btn btn-small z-depth-2" >View details <i class="material-icons right">chevron_right</i></router-link></td>
           </tr>
         </tbody>
         <tfoot>
@@ -83,5 +84,8 @@ li {
 }
 a {
   color: #42b983;
+}
+.sort_arrow:hover{
+  cursor: pointer;
 }
 </style>

@@ -1,13 +1,20 @@
 <template>
-    <header>
-        <img class="logo" alt="SW resources list logo" src="../assets/logo.png">
-        <p>{{ title }}</p>
-
-        <router-link :to="{name: 'home'}">Home</router-link>
+    <header class="z-depth-2">
+        <nav>
+            <div class="nav-wrapper black lighten-1">
+                <a href="#"><Logo :width="150" :height="70" /></a>
+                <ul id="nav-mobile" class="right">
+                    <li><p>{{ title }}</p></li>
+                    <li><router-link :to="{name: 'home'}">Vehicles</router-link></li>
+                </ul>
+            </div>
+        </nav>
     </header>
 </template>
 
 <script setup>
+import Logo from '@/components/Logo.vue'
+
 const title = 'Star Wars API'
 
 </script>
@@ -16,15 +23,15 @@ const title = 'Star Wars API'
     header{
         height: 45px;
         max-height: 45px;
-        border-bottom: 1px solid grey;
+        border-bottom: 1px solid rgb(226, 223, 223);
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        box-shadow: 0 2px 5px 0 rgba(0,0,0,.16), 0 2px 5px 0 rgba(0,0,0,.23);
+        box-shadow: 0 2px 5px 0 rgba(224, 219, 219, 0.893), 0 2px 5px 0 rgb(163, 157, 157);
 
         img.logo{
-            max-width: 30px;
-            padding: 5px 15px;
+            max-width: 90px;
+            padding: 15px 8px;
         }
 
         p{

@@ -69,9 +69,7 @@ export default {
       }
     },
     headerItems(){
-      let headers = Object.keys(this.resource.results[0]).slice(0,3)
-      headers.push('details')
-      return headers
+      return Object.keys(this.resource.results[0]).slice(0,3)
     }
   },
   components: {
@@ -86,11 +84,18 @@ body{
   margin: 0;
   padding: 0;
   font-size: 16px;
+  background-color: #575050;
+  color: white!important;
 }
 
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.btn, .btn-small{
+  color: black !important;
+  background-color: #fce700b8;
 }
 </style>
