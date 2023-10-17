@@ -55,7 +55,7 @@ export default {
             } finally {
                 setTimeout(() => {
                     this.star_wars = false
-                }, 4500)
+                }, 5000)
 
             }
             
@@ -122,9 +122,8 @@ export default {
 
     #content {
         animation: scroll 3s linear 0s;
-        position: absolute;
+        position: relative;
         top: 15%;
-        width: 85vw;
     }
 
     #title, #subtitle {

@@ -4,8 +4,7 @@
             <div class="nav-wrapper black lighten-1">
                 <a href="#"><Logo :width="150" :height="70" /></a>
                 <ul id="nav-mobile" class="right">
-                    <li><p>{{ title }}</p></li>
-                    <li><router-link :to="{name: 'home'}">Vehicles</router-link></li>
+                    <li><router-link class="btn-small" :to="{name: 'home'}">Vehicles</router-link></li>
                 </ul>
             </div>
         </nav>
@@ -15,14 +14,12 @@
 <script setup>
 import Logo from '@/components/Logo.vue'
 
-const title = 'Star Wars API'
-
 </script>
 
 <style scoped>
     header{
-        height: 45px;
-        max-height: 45px;
+        height: 75px;
+        max-height: 75px;
         border-bottom: 1px solid rgb(226, 223, 223);
         display: flex;
         justify-content: flex-start;
@@ -39,5 +36,9 @@ const title = 'Star Wars API'
             font-weight: 700;
             margin: 0;
         }
+    }
+
+    nav{
+        height: 70px;
     }
 </style>
