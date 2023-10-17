@@ -1,4 +1,14 @@
-# qu_vehicles
+# Star Wars API information display
+# This first version only for vehicles
+
+Try it running 
+```
+npm run serve 
+```
+on your local machine, after 
+```
+npm install
+```
 
 ## Project setup
 ```
