@@ -17,7 +17,7 @@
 }
 
 .cube1, .cube2 {
-  background-color: #d8cdcd;
+  background-color: #d7c31a;
   width: 25px;
   height: 25px;
   position: absolute;

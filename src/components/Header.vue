@@ -20,11 +20,11 @@ import Logo from '@/components/Logo.vue'
     header{
         height: 75px;
         max-height: 75px;
-        border-bottom: 1px solid rgb(226, 223, 223);
+        border-bottom: 1px solid #d7c31a;
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        box-shadow: 0 2px 5px 0 rgba(224, 219, 219, 0.893), 0 2px 5px 0 rgb(163, 157, 157);
+        box-shadow: 0 2px 5px 0 #d7c31a, 0 2px 5px 0 rgb(163, 157, 157);
 
         img.logo{
             max-width: 90px;

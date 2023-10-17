@@ -84,7 +84,6 @@ body{
   margin: 0;
   padding: 0;
   font-size: 16px;
-  background-color: #575050;
   color: white!important;
   background: black url('assets/background.png');
 }
@@ -97,6 +96,6 @@ body{
 
 .btn, .btn-small{
   color: black !important;
-  background-color: #fce700b8;
+  background-color: #d7c31a;
 }
 </style>
