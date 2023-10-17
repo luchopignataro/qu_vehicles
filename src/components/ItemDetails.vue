@@ -11,6 +11,7 @@
                 <div v-for="(item, name) in info" :key="item">
                     <span class="">{{ name.toUpperCase() }}</span>
                     <span class="badge">{{ item }}</span>
+                    <hr>
                 </div>
             </div>  
         </div>
@@ -121,7 +122,7 @@ export default {
     }
 
     #content {
-        animation: scroll 3s linear 0s;
+        animation: scroll 1.5s linear 0s;
         position: relative;
         top: 15%;
     }

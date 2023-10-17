@@ -86,6 +86,7 @@ body{
   font-size: 16px;
   background-color: #575050;
   color: white!important;
+  background: black url('assets/background.png');
 }
 
 #app {
